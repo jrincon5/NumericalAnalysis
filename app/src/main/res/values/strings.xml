@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Numerical Analysis</string>
+    <string name="action_Home">Home</string>
+    <string name="action_OneVariable">One Variable</string>
+    <string name="action_EquationsSystems">Equations Systems</string>
+    <string name="action_Interpolation">Interpolation</string>
+    <string name="title_activity_one_variable">One Variable</string>
+    <string name="title_activity_equiations_systems">Equiations Systems</string>
+    <string name="title_activity_interpolation">Interpolation</string>
+</resources>

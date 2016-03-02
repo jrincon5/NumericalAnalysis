@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="co.edu.eafit.numericalanalysis.MainActivity" >
+
+    <item android:id="@+id/action_Home"
+        android:title="@string/action_Home"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_OneVariable"
+        android:title="@string/action_OneVariable"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_EquationsSystems"
+        android:title="@string/action_EquationsSystems"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_Interpolation"
+        android:title="@string/action_Interpolation"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>
