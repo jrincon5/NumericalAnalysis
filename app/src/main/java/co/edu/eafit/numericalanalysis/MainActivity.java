@@ -54,13 +54,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_EquationsSystems) {
-            Intent inte = new Intent(MainActivity.this,EquiationsSystems.class);
-            startActivity(inte);
+            Intent inte2 = new Intent(MainActivity.this,EquiationsSystems.class);
+            startActivity(inte2);
         }
 
         if (id == R.id.action_Interpolation) {
-            Intent inte = new Intent(MainActivity.this,Interpolation.class);
-            startActivity(inte);
+            Intent inte3 = new Intent(MainActivity.this,Interpolation.class);
+            startActivity(inte3);
         }
 
         return super.onOptionsItemSelected(item);

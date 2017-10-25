@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="co.edu.eafit.numericalanalysis.interpolation.ReductionSystems">
+
+    <item android:id="@+id/action_Home_Item"
+        android:title="@string/action_Home"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_ReductionSystems_Item"
+        android:title="@string/title_activity_reduction_systems"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_LagrangeInterpolation_Item"
+        android:title="@string/title_activity_lagrange_interpolation"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_NewtonInterpolation_Item"
+        android:title="@string/title_activity_newton_interpolation"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+</menu>

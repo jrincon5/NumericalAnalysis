@@ -12,4 +12,75 @@
     tools:context="co.edu.eafit.numericalanalysis.EquiationsSystems"
     tools:showIn="@layout/activity_equiations_systems">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gauss Elimination"
+        android:id="@+id/button_Gauss_Eliminatiom"
+        android:height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Factoring LU"
+        android:id="@+id/button_Factoring_LU"
+        android:height="80dp"
+        android:layout_below="@+id/button_Gauss_Eliminatiom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/button_Gauss_Eliminatiom"
+        android:layout_alignEnd="@+id/button_Gauss_Eliminatiom" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jacobi"
+        android:id="@+id/button_Jacobi"
+        android:height="80dp"
+        android:layout_below="@+id/button_Factoring_LU"
+        android:layout_alignRight="@+id/button_Factoring_LU"
+        android:layout_alignEnd="@+id/button_Factoring_LU"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gauss Seidel"
+        android:id="@+id/button_Gauss_Seidel"
+        android:height="80dp"
+        android:layout_below="@+id/button_Jacobi"
+        android:layout_alignRight="@+id/button_Jacobi"
+        android:layout_alignEnd="@+id/button_Jacobi"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Richardson"
+        android:id="@+id/button_Richardson"
+        android:height="80dp"
+        android:layout_below="@+id/button_Gauss_Seidel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/button_Gauss_Seidel"
+        android:layout_alignEnd="@+id/button_Gauss_Seidel" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOR"
+        android:id="@+id/button_SOR"
+        android:height="80dp"
+        android:layout_below="@+id/button_Richardson"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/button_Richardson"
+        android:layout_alignEnd="@+id/button_Richardson" />
+
 </RelativeLayout>

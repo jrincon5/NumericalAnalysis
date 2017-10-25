@@ -1,6 +1,7 @@
 package co.edu.eafit.numericalanalysis;
 
 import android.content.Intent;
+import android.opengl.EGLExt;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,8 +10,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 
-public class OneVariable extends AppCompatActivity {
+import co.edu.eafit.numericalanalysis.onevariable.Bisection;
+import co.edu.eafit.numericalanalysis.onevariable.FalseRule;
+import co.edu.eafit.numericalanalysis.onevariable.FixedPoint;
+import co.edu.eafit.numericalanalysis.onevariable.NewtonRaphson;
+import co.edu.eafit.numericalanalysis.onevariable.NewtonRaphsonModified;
+import co.edu.eafit.numericalanalysis.onevariable.Secant;
+
+public class OneVariable extends AppCompatActivity implements View.OnClickListener{
+    Button btn_bisection, btn_FalseRulse, btn_FixedPoint, btn_NewtonRaphson, btn_Secant, btn_NewtonRaphsonModified;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,14 +30,19 @@ public class OneVariable extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
+        btn_bisection = (Button) findViewById(R.id.button_Bisection);
+        btn_FalseRulse = (Button) findViewById(R.id.button_FalseRule);
+        btn_FixedPoint = (Button) findViewById(R.id.button_FixedPoint);
+        btn_NewtonRaphson = (Button) findViewById(R.id.button_NewtonRaphosn);
+        btn_NewtonRaphsonModified=(Button) findViewById(R.id.button_NewtonModified);
+        btn_Secant = (Button) findViewById(R.id.button_Secant);
+
+        btn_bisection.setOnClickListener(this);
+        btn_FalseRulse.setOnClickListener(this);
+        btn_FixedPoint.setOnClickListener(this);
+        btn_NewtonRaphson.setOnClickListener(this);
+        btn_NewtonRaphsonModified.setOnClickListener(this);
+        btn_Secant.setOnClickListener(this);
     }
 
     @Override
@@ -35,6 +51,38 @@ public class OneVariable extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
         return true;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.button_Bisection:
+                Intent inte = new Intent(OneVariable.this,Bisection.class);
+                startActivity(inte);
+                break;
+
+            case R.id.button_FalseRule:
+                Intent inte2 = new Intent(OneVariable.this,FalseRule.class);
+                startActivity(inte2);
+                break;
+
+            case R.id.button_FixedPoint:
+                Intent inte3 = new Intent(OneVariable.this,FixedPoint.class);
+                startActivity(inte3);
+                break;
+            case R.id.button_NewtonRaphosn:
+                Intent inte4 = new Intent(OneVariable.this,NewtonRaphson.class);
+                startActivity(inte4);
+                break;
+            case R.id.button_NewtonModified:
+                Intent inte6 = new Intent(OneVariable.this,NewtonRaphsonModified.class);
+                startActivity(inte6);
+                break;
+            case R.id.button_Secant:
+                Intent inte5 = new Intent(OneVariable.this,Secant.class);
+                startActivity(inte5);
+                break;
+        }
     }
 
     @Override

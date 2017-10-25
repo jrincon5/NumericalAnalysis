@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="co.edu.eafit.numericalanalysis.onevariable.AlgorithmTabs.AlgorithmSecant"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:id="@+id/scrollView_Secant">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_Secant_resultados"
+                android:layout_gravity="center_horizontal"
+                android:clickable="true"
+                android:contextClickable="true" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal|numberSigned"
+                android:id="@+id/inpt_Secant_intervalA"
+                android:hint="X0"
+                android:layout_marginTop="5dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal|numberSigned"
+                android:id="@+id/inpt_Secant_intervalB"
+                android:hint="X1"
+                android:layout_marginTop="5dp" />
+
+</LinearLayout>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:id="@+id/inpt_Secant_iterations"
+                android:hint="Iterations"
+                android:layout_marginTop="5dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:id="@+id/inpt_Secant_tolerance"
+                android:hint="Tolerance"
+                android:layout_marginTop="5dp" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:id="@+id/inpt_Secant_delta"
+                android:hint="Delta"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right" />
+
+            <Button
+                android:layout_width="221dp"
+                android:layout_height="36dp"
+                android:text="Calculate"
+                android:id="@+id/button_Secant_Calculate"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                android:background="@color/colorAccent"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Output"
+                android:id="@+id/txt_salida_Secant"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txt_salida_push"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

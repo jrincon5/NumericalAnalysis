@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="co.edu.eafit.numericalanalysis.onevariable.Bisection">
+
+    <item android:id="@+id/action_Home_Item"
+        android:title="@string/action_Home"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_Bisection_Item"
+        android:title="@string/title_activity_bisection"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_FalseRule_Item"
+        android:title="@string/title_activity_false_rule"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_FixedPoint_Item"
+        android:title="@string/title_activity_fixed_point"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_NewtonRaphson_Item"
+        android:title="@string/title_activity_newton_raphson"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_NewtonRaphsonModified_Item"
+        android:title="@string/title_activity_newton_raphson_modified"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_Secant_Item"
+        android:title="@string/title_activity_secant"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+</menu>

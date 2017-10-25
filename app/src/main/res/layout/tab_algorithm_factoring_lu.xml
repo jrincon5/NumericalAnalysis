@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/inpt_factoring_lu_order"
+        android:hint="Order matrix"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="right" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:text="Generate Order"
+            android:ems="10"
+            android:id="@+id/button_Generate_Factoring_Lu"
+            android:layout_gravity="right" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate System"
+            android:ems="10"
+            android:id="@+id/button_Calculate_Factoring_Lu"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioFactoringLu"
+            android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crout"
+            android:id="@+id/radioButton_crout" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doulittle"
+            android:id="@+id/radioButton_doulittle" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cholesky"
+            android:id="@+id/radioButton_cholesky" />
+    </RadioGroup>
+
+    <ScrollView
+        android:id="@+id/scrollvertical_Matrix_Factoring_Lu_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Vector B"
+                android:id="@+id/txt_vector_B_Factoring_Lu"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollhorizontal2"
+                android:scrollbars="horizontal">
+
+                <TableLayout
+                    android:id="@+id/matrix_factoring_lu_vector_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </TableLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="System Matrix"
+                android:id="@+id/txt_system_matrix_Factoring_Lu"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center" />
+
+            <ScrollView
+                android:id="@+id/scrollvertical_Matrix_Factoring_Lu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:layout_marginTop="15dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/scrollhorizontal"
+                    android:scrollbars="horizontal">
+
+                    <TableLayout
+                        android:id="@+id/matrix_factoring_lu_system_matrix"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </TableLayout>
+
+                </HorizontalScrollView>
+            </ScrollView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

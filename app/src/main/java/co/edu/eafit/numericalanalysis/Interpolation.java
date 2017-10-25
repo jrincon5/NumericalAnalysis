@@ -2,15 +2,19 @@ package co.edu.eafit.numericalanalysis;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
-public class Interpolation extends AppCompatActivity {
+import co.edu.eafit.numericalanalysis.interpolation.LagrangeInterpolation;
+import co.edu.eafit.numericalanalysis.interpolation.NewtonInterpolation;
+import co.edu.eafit.numericalanalysis.interpolation.ReductionSystems;
+
+public class Interpolation extends AppCompatActivity implements View.OnClickListener{
+    Button btn_Reduction_Systems, btn_Lagrange_Interpolation, btn_Newton_Interpolation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,21 +23,19 @@ public class Interpolation extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        btn_Reduction_Systems=(Button) findViewById(R.id.button_Reduction_Systems);
+        btn_Lagrange_Interpolation=(Button) findViewById(R.id.button_Lagrange_Interpolation);
+        btn_Newton_Interpolation=(Button) findViewById(R.id.button_Newton_Interpolation);
+
+        btn_Reduction_Systems.setOnClickListener(this);
+        btn_Lagrange_Interpolation.setOnClickListener(this);
+        btn_Newton_Interpolation.setOnClickListener(this);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
-
         return true;
     }
 
@@ -64,6 +66,26 @@ public class Interpolation extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button_Reduction_Systems:
+                Intent inte = new Intent(Interpolation.this, ReductionSystems.class);
+                startActivity(inte);
+                break;
+
+            case R.id.button_Lagrange_Interpolation:
+                Intent inte2= new Intent(Interpolation.this, LagrangeInterpolation.class);
+                startActivity(inte2);
+                break;
+
+            case R.id.button_Newton_Interpolation:
+                Intent inte3= new Intent(Interpolation.this, NewtonInterpolation.class);
+                startActivity(inte3);
+                break;
+        }
     }
 
 }

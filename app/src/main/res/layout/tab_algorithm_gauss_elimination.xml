@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/inpt_gauss_elimination_order"
+            android:hint="Order matrix"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="right" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:text="Generate Order"
+            android:ems="10"
+            android:id="@+id/button_Generate_Gauss_Elimination"
+            android:layout_gravity="right" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate System"
+            android:ems="10"
+            android:id="@+id/button_Calculate_Gauss_Elimination"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollvertical_Matrix_Gauss_Elimination_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_marginTop="15dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Vector B"
+            android:id="@+id/txt_vector_B_Gauss_Elimination"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollhorizontal2"
+            android:scrollbars="horizontal">
+
+            <TableLayout
+                android:id="@+id/matrix_gauss_elimination_vector_b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="System Matrix"
+            android:id="@+id/txt_system_matrix_Gauss_Elimination"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center" />
+
+        <ScrollView
+            android:id="@+id/scrollvertical_Matrix_Gauss_Elimination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:layout_marginTop="15dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/scrollhorizontal"
+                android:scrollbars="horizontal">
+
+                <TableLayout
+                    android:id="@+id/matrix_gauss_elimination_system_matrix"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </TableLayout>
+
+            </HorizontalScrollView>
+        </ScrollView>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

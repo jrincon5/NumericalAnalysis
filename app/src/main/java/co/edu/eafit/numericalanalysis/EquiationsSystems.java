@@ -9,8 +9,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
-public class EquiationsSystems extends AppCompatActivity {
+import co.edu.eafit.numericalanalysis.equiationssystems.FactoringLU;
+import co.edu.eafit.numericalanalysis.equiationssystems.GaussElimination;
+import co.edu.eafit.numericalanalysis.equiationssystems.GaussSeidel;
+import co.edu.eafit.numericalanalysis.equiationssystems.Jacobi;
+import co.edu.eafit.numericalanalysis.equiationssystems.Richardson;
+import co.edu.eafit.numericalanalysis.equiationssystems.SOR;
+
+public class EquiationsSystems extends AppCompatActivity implements View.OnClickListener{
+    Button btn_Gauss_Elimination, btn_Factoring_Lu, btn_Jacobi, btn_Gauss_Seidel, btn_Richardson, btn_SOR;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,14 +28,19 @@ public class EquiationsSystems extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        btn_Gauss_Elimination = (Button) findViewById(R.id.button_Gauss_Eliminatiom);
+        btn_Factoring_Lu = (Button) findViewById(R.id.button_Factoring_LU);
+        btn_Jacobi = (Button) findViewById(R.id.button_Jacobi);
+        btn_Gauss_Seidel = (Button) findViewById(R.id.button_Gauss_Seidel);
+        btn_Richardson = (Button) findViewById(R.id.button_Richardson);
+        btn_SOR = (Button) findViewById(R.id.button_SOR);
+
+        btn_Gauss_Elimination.setOnClickListener(this);
+        btn_Factoring_Lu.setOnClickListener(this);
+        btn_Jacobi.setOnClickListener(this);
+        btn_Gauss_Seidel.setOnClickListener(this);
+        btn_Richardson.setOnClickListener(this);
+        btn_SOR.setOnClickListener(this);
     }
 
     @Override
@@ -64,5 +78,40 @@ public class EquiationsSystems extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.button_Gauss_Eliminatiom:
+                Intent inte = new Intent(EquiationsSystems.this,GaussElimination.class);
+                startActivity(inte);
+                break;
+
+            case R.id.button_Factoring_LU:
+                Intent inte2 = new Intent(EquiationsSystems.this,FactoringLU.class);
+                startActivity(inte2);
+                break;
+
+            case R.id.button_Jacobi:
+                Intent inte3 = new Intent(EquiationsSystems.this,Jacobi.class);
+                startActivity(inte3);
+                break;
+
+            case R.id.button_Gauss_Seidel:
+                Intent inte4 = new Intent(EquiationsSystems.this,GaussSeidel.class);
+                startActivity(inte4);
+                break;
+
+            case R.id.button_Richardson:
+                Intent inte5 = new Intent(EquiationsSystems.this,Richardson.class);
+                startActivity(inte5);
+                break;
+
+            case R.id.button_SOR:
+                Intent inte6 = new Intent(EquiationsSystems.this,SOR.class);
+                startActivity(inte6);
+                break;
+        }
     }
 }

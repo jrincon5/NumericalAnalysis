@@ -29,6 +29,76 @@
         <activity
             android:name=".Interpolation"
             android:label="@string/title_activity_interpolation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".onevariable.Bisection"
+            android:label="@string/title_activity_bisection"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+        <activity
+            android:name=".onevariable.BisectionTabs.AlgorithmBisection"
+            android:label="@string/title_activity_algorithm_bisection"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".onevariable.IncrementalSearches"
+            android:label="@string/title_activity_incremental_searches"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        -->
+        <activity
+            android:name=".onevariable.FalseRule"
+            android:label="@string/title_activity_false_rule"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".onevariable.FixedPoint"
+            android:label="@string/title_activity_fixed_point"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".onevariable.NewtonRaphson"
+            android:label="@string/title_activity_newton_raphson"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".onevariable.Secant"
+            android:label="@string/title_activity_secant"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".equiationssystems.GaussElimination"
+            android:label="@string/title_activity_gauss_elimination"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".equiationssystems.FactoringLU"
+            android:label="@string/title_activity_factoring_lu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".equiationssystems.Jacobi"
+            android:label="@string/title_activity_jacobi"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".equiationssystems.GaussSeidel"
+            android:label="@string/title_activity_gauss_seidel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".equiationssystems.Richardson"
+            android:label="@string/title_activity_richardson"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".equiationssystems.SOR"
+            android:label="@string/title_activity_sor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".interpolation.ReductionSystems"
+            android:label="@string/title_activity_reduction_systems"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".interpolation.LagrangeInterpolation"
+            android:label="@string/title_activity_lagrange_interpolation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".interpolation.NewtonInterpolation"
+            android:label="@string/title_activity_newton_interpolation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".onevariable.NewtonRaphsonModified"
+            android:label="@string/title_activity_newton_raphson_modified"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

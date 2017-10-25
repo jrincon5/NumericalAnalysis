@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+        <EditText
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/inpt_sor_order"
+            android:hint="Order matrix"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="right" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/inpt_sor_iterations"
+            android:hint="Iterations"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+        <EditText
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/inpt_sor_delta"
+            android:hint="Delta"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="right" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/inpt_sor_tolerance"
+            android:hint="Tolerance"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:text="Generate Order"
+            android:ems="10"
+            android:id="@+id/button_Generate_SOR"
+            android:layout_gravity="right" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate System"
+            android:ems="10"
+            android:id="@+id/button_Calculate_SOR"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollvertical_Matrix_SOR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Vector Initial"
+                android:id="@+id/txt_vector_inicial_SOR"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollhorizontal3"
+                android:scrollbars="horizontal">
+
+                <TableLayout
+                    android:id="@+id/matrix_sor_vector_inicial"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </TableLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Vector B"
+                android:id="@+id/txt_vector_B_SOR"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollhorizontal2"
+                android:scrollbars="horizontal">
+
+                <TableLayout
+                    android:id="@+id/matrix_sor_vector_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </TableLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="System Matrix"
+                android:id="@+id/txt_system_matrix_SOR"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center" />
+
+            <ScrollView
+                android:id="@+id/scrollvertical_Matrix_SOR_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:layout_marginTop="15dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/scrollhorizontal"
+                    android:scrollbars="horizontal">
+
+                    <TableLayout
+                        android:id="@+id/matrix_sor_system_matrix"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </TableLayout>
+
+                </HorizontalScrollView>
+            </ScrollView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
