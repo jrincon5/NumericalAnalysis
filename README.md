@@ -1,2 +1,2 @@
 # NumericalAnalysis
-- Practica desarrollada para el curso de análisis númerico de la Universidad EAFIT
+- Practica desarrollada para el curso de análisis numérico de la Universidad EAFIT
